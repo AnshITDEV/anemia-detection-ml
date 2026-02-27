@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AnemiaCheck - AI-Powered Anemia Detection</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Exo+2:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="animated-bg">
+        <div class="particles" id="particles"></div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+            <div class="shape shape-4"></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon"><i class="fas fa-droplet"></i></span>
+                <span class="logo-text">AnemiaCheck</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#detect">Detect</a></li>
+                <li><a href="#results">Results</a></li>
+            </ul>
+            <div class="nav-toggle" id="navToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-badge" data-aos="fade-down">
+                <span class="badge-icon"><i class="fas fa-microscope"></i></span>
+                <span>AI-Powered Health Detection</span>
+            </div>
+            <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                Detect Anemia with
+                <span class="gradient-text">AI Precision</span>
+            </h1>
+            <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                Advanced machine learning analyzes your blood test results to provide 
+                accurate anemia detection in seconds. Early detection leads to better outcomes.
+            </p>
+            <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                <a href="#detect" class="btn btn-primary">
+                    <span>Start Detection</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#about" class="btn btn-secondary">
+                    <span>Learn More</span>
+                </a>
+            </div>
+            <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                <div class="stat-item">
+                    <span class="stat-number" data-count="98">0</span>
+                    <span class="stat-label">% Accuracy</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="5000">0</span>
+                    <span class="stat-label">+ Tests Done</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-count="24">0</span>
+                    <span class="stat-label">/7 Support</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual" data-aos="zoom-in" data-aos-delay="500">
+            <div class="blood-cell-animation">
+                <div class="cell cell-1"></div>
+                <div class="cell cell-2"></div>
+                <div class="cell cell-3"></div>
+                <div class="cell cell-4"></div>
+                <div class="cell cell-5"></div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">About Anemia</span>
+                <h2 class="section-title">Understanding <span class="gradient-text">Anemia</span></h2>
+                <p class="section-subtitle">What you need to know about this common blood disorder</p>
+            </div>
+            <div class="about-grid">
+                <div class="about-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card-icon">
+                        <i class="fas fa-heart-pulse"></i>
+                    </div>
+                    <h3>What is Anemia?</h3>
+                    <p>Anemia is a condition where your blood doesn't have enough healthy red blood cells or hemoglobin, reducing oxygen flow to your body.</p>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card-icon">
+                        <i class="fas fa-exclamation-triangle"></i>
+                    </div>
+                    <h3>Common Symptoms</h3>
+                    <p>Fatigue, weakness, pale skin, shortness of breath, dizziness, and cold hands and feet are typical signs of anemia.</p>
+                </div>
+                <div class="about-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card-icon">
+                        <i class="fas fa-shield-heart"></i>
+                    </div>
+                    <h3>Prevention & Treatment</h3>
+                    <p>Iron-rich diet, supplements, and proper medical care can effectively manage and treat most types of anemia.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detection Section -->
+    <section class="detect" id="detect">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Blood Test Analysis</span>
+                <h2 class="section-title">Enter Your <span class="gradient-text">Blood Values</span></h2>
+                <p class="section-subtitle">Fill in the details from your blood test report</p>
+            </div>
+            <div class="detect-wrapper">
+                <form id="anemiaForm" class="detect-form" data-aos="fade-up">
+                    <div class="form-header">
+                        <i class="fas fa-clipboard-list"></i>
+                        <span>Blood Test Parameters</span>
+                    </div>
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="gender">
+                                <i class="fas fa-venus-mars"></i>
+                                Gender
+                            </label>
+                            <select id="gender" name="gender" required>
+                                <option value="" disabled selected>Select Gender</option>
+                                <option value="0">Female</option>
+                                <option value="1">Male</option>
+                            </select>
+                            <div class="input-highlight"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">
+                                <i class="fas fa-birthday-cake"></i>
+                                Age
+                            </label>
+                            <input type="number" id="age" name="age" min="1" max="120" placeholder="Enter age" required>
+                            <div class="input-highlight"></div>
+                        </div>
+                        <div class="form-group">
+                            <label for="hemoglobin">
+                                <i class="fas fa-droplet"></i>
+                                Hemoglobin (g/dL)
+                            </label>
+                            <input type="number" id="hemoglobin" name="hemoglobin" step="0.01" min="0" max="30" placeholder="e.g., 14.5" required>
+                            <div class="input-highlight"></div>
+                            <span class="input-hint">Normal: F 12-16, M 13.5-17.5</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mch">
+                                <i class="fas fa-circle-notch"></i>
+                                MCH (pg)
+                            </label>
+                            <input type="number" id="mch" name="mch" step="0.01" min="0" max="50" placeholder="e.g., 28.5" required>
+                            <div class="input-highlight"></div>
+                            <span class="input-hint">Normal: 27-33 pg</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mchc">
+                                <i class="fas fa-vials"></i>
+                                MCHC (g/dL)
+                            </label>
+                            <input type="number" id="mchc" name="mchc" step="0.01" min="0" max="50" placeholder="e.g., 33.5" required>
+                            <div class="input-highlight"></div>
+                            <span class="input-hint">Normal: 33-36 g/dL</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mcv">
+                                <i class="fas fa-expand"></i>
+                                MCV (fL)
+                            </label>
+                            <input type="number" id="mcv" name="mcv" step="0.01" min="0" max="150" placeholder="e.g., 85.0" required>
+                            <div class="input-highlight"></div>
+                            <span class="input-hint">Normal: 80-100 fL</span>
+                        </div>
+                        <div class="form-group">
+                            <label for="rbc">
+                                <i class="fas fa-redo"></i>
+                                RBC Count (million/μL)
+                            </label>
+                            <input type="number" id="rbc" name="rbc" step="0.01" min="0" max="10" placeholder="e.g., 5.0" required>
+                            <div class="input-highlight"></div>
+                            <span class="input-hint">Normal: F 4.0-5.5, M 4.5-6.0</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <span class="btn-text">
+                            <i class="fas fa-dna"></i>
+                            Analyze Blood Values
+                        </span>
+                        <span class="btn-loader">
+                            <span class="spinner"></span>
+                            Analyzing...
+                        </span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section class="results" id="results">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-badge">Analysis Results</span>
+                <h2 class="section-title">Your <span class="gradient-text">Results</span></h2>
+                <p class="section-subtitle">AI-powered analysis of your blood test values</p>
+            </div>
+            <div class="results-wrapper">
+                <div class="results-card" id="resultsCard" data-aos="zoom-in">
+                    <!-- Initial State -->
+                    <div class="results-initial" id="resultsInitial">
+                        <div class="initial-icon">
+                            <i class="fas fa-chart-pie"></i>
+                        </div>
+                        <h3>No Analysis Yet</h3>
+                        <p>Enter your blood test values and click "Analyze" to see your results</p>
+                    </div>
+                    
+                    <!-- Loading State -->
+                    <div class="results-loading" id="resultsLoading">
+                        <div class="loading-animation">
+                            <div class="pulse-ring"></div>
+                            <div class="pulse-ring delay-1"></div>
+                            <div class="pulse-ring delay-2"></div>
+                            <div class="pulse-core">
+                                <i class="fas fa-dna"></i>
+                            </div>
+                        </div>
+                        <h3>Analyzing Your Results</h3>
+                        <p>Processing your blood test data...</p>
+                    </div>
+                    
+                    <!-- Results Display -->
+                    <div class="results-display" id="resultsDisplay">
+                        <div class="result-header">
+                            <div class="result-icon" id="resultIcon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div class="result-title">
+                                <h3 id="resultTitle">No Anemia Detected</h3>
+                                <span class="risk-badge" id="riskBadge">Low Risk</span>
+                            </div>
+                        </div>
+                        
+                        <div class="probability-section">
+                            <h4>Probability Analysis</h4>
+                            <div class="probability-bars">
+                                <div class="prob-bar">
+                                    <div class="prob-label">
+                                        <span>Anemia</span>
+                                        <span id="probAnemia">0%</span>
+                                    </div>
+                                    <div class="prob-track">
+                                        <div class="prob-fill anemia" id="probAnemiaBar"></div>
+                                    </div>
+                                </div>
+                                <div class="prob-bar">
+                                    <div class="prob-label">
+                                        <span>Normal</span>
+                                        <span id="probNormal">0%</span>
+                                    </div>
+                                    <div class="prob-track">
+                                        <div class="prob-fill normal" id="probNormalBar"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="confidence-section">
+                            <div class="confidence-ring">
+                                <svg class="progress-ring" width="120" height="120">
+                                    <circle class="progress-ring-bg" cx="60" cy="60" r="52" />
+                                    <circle class="progress-ring-fill" cx="60" cy="60" r="52" id="confidenceRing" />
+                                </svg>
+                                <div class="confidence-value">
+                                    <span id="confidenceValue">0</span>
+                                    <span class="confidence-percent">%</span>
+                                </div>
+                            </div>
+                            <div class="confidence-label">Confidence</div>
+                        </div>
+                        
+                        <div class="recommendation-section">
+                            <div class="rec-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <p id="recommendationText">Your blood values appear normal.</p>
+                        </div>
+                        
+                        <button class="btn-reset" id="resetBtn">
+                            <i class="fas fa-redo"></i>
+                            Test Again
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">
+                        <span class="logo-icon"><i class="fas fa-droplet"></i></span>
+                        <span class="logo-text">AnemiaCheck</span>
+                    </a>
+                    <p>AI-powered anemia detection for better health outcomes.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#detect">Detect</a></li>
+                        <li><a href="#results">Results</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Contact</h4>
+                    <p><i class="fas fa-envelope"></i> support@anemiacheck.com</p>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 AnemiaCheck. All rights reserved.</p>
+                <p class="disclaimer">Disclaimer: This is not a medical diagnosis. Consult a healthcare professional.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>
