@@ -1,5 +1,9 @@
 # Anemia Detection using Machine Learning
 
+**Live Demo** https://anemia-detection-ml-production.up.railway.app
+Deployed on Railway Cloud
+Flask + Machine Learning + Scikit-Learn
+
 ## Project Overview
 This project is an AI-based Clinical Decision Support System (CDSS) developed to detect anemia using patient blood test parameters. The system uses machine learning algorithms to analyze medical data and predict whether a patient is anemic.
 
